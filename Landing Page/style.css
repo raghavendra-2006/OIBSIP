@@ -1,0 +1,183 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #111;
+    color: white;
+}
+
+/* Header */
+header {
+    background-color: #e50914;
+    padding: 15px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 28px;
+}
+
+nav a {
+    color: white;
+    margin-left: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: opacity 0.3s;
+}
+
+nav a:hover { /* Added Hover Effect */
+    opacity: 0.8;
+}
+
+/* Hero Section */
+.hero {
+    height: 70vh;
+    /* Use a better placeholder or a solid image */
+    background: url("https://via.placeholder.com/1200x500/000000/ffffff?text=Cinematic+Background") center/cover no-repeat; 
+    display: flex;
+    align-items: center;
+    padding: 50px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Helps text stand out */
+}
+
+.hero-text h2 {
+    font-size: 45px;
+    margin-bottom: 10px;
+}
+
+.hero-text p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+/* --- FULL SEARCH BOX STYLES --- */
+.search-box {
+    display: flex; 
+    max-width: 450px;
+    margin-top: 30px;
+}
+
+.search-box input {
+    flex-grow: 1; 
+    padding: 15px;
+    font-size: 16px;
+    border: 2px solid #e50914; 
+    border-right: none;
+    border-radius: 5px 0 0 5px; 
+    outline: none;
+    color: #111; 
+}
+
+.cta-button {
+    padding: 15px 30px;
+    background-color: #e50914; 
+    border: none;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 0 5px 5px 0; 
+    transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+.cta-button:hover {
+    background-color: #ff3333; /* Brighter red on hover */
+    transform: scale(1.02);
+}
+/* --- END SEARCH BOX STYLES --- */
+
+/* Movies Section */
+.movies {
+    padding: 50px;
+}
+
+.movies h2 {
+    margin-bottom: 30px;
+}
+
+.movie-cards {
+    display: flex;
+    gap: 30px;
+}
+
+.card {
+    background-color: #222;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    flex: 1; /* Allows cards to take up equal space */
+    min-width: 250px; /* Ensures cards don't get too narrow on medium screens */
+}
+
+.card img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.card h3 {
+    margin: 10px 0;
+}
+
+.card button {
+    margin-top: 10px;
+    padding: 8px 20px;
+    background-color: #e50914;
+    border: none;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.card button:hover { /* Added Hover Effect */
+    background-color: #ff3333;
+}
+
+/* Footer */
+footer {
+    background-color: #000;
+    text-align: center;
+    padding: 15px;
+    margin-top: 30px;
+}
+
+/* --- MOBILE RESPONSIVENESS (Crucial for the task requirement "do not overlap") --- */
+@media (max-width: 768px) {
+    
+    header {
+        flex-direction: column; /* Stack header items */
+        padding: 15px 20px;
+    }
+    
+    nav a {
+        margin: 0 10px;
+        font-size: 14px;
+    }
+    
+    .hero {
+        height: auto; /* Allow hero section to collapse */
+        padding: 30px 20px;
+    }
+    
+    .hero-text h2 {
+        font-size: 30px;
+    }
+
+    .movies {
+        padding: 30px 20px;
+    }
+
+    .movie-cards {
+        flex-direction: column; /* Stack the movie cards vertically */
+        gap: 20px;
+    }
+    
+    .search-box {
+        max-width: 100%; /* Search box takes full width on mobile */
+    }
+}
