@@ -1,0 +1,160 @@
+/* --- Global Styles --- */
+body {
+    margin: 0;
+    font-family: Verdana, sans-serif;
+}
+
+/* Ensure font color is visible on the left side */
+.left h1, .left h2, .left h3, .left p {
+    color: #003b2f; 
+}
+
+/* --- Container Layout --- */
+.container {
+    display: flex;
+    min-height: 100vh; /* Use min-height to allow content to extend the page */
+}
+
+.left {
+    width: 35%;
+    background-color: #e0f7fa; 
+    padding: 40px;
+    text-align: center;
+}
+
+.right {
+    width: 65%;
+    background-color: #1f2a2e;
+    color: white;
+    padding: 50px;
+}
+
+/* --- Left Column Styling (Profile) --- */
+
+/* The image is contained inside this div */
+.profile-photo {
+    /* Set a fixed size for the container itself */
+    width: 160px; 
+    height: 160px;
+    margin: 0 auto 20px auto; /* Center the container */
+    border-radius: 50%;
+    overflow: hidden; /* **CRUCIAL: Hides any part of the image that overflows the circle** */
+    border: 5px solid #00c98d;
+    box-sizing: content-box; /* Ensures border doesn't shrink the size */
+}
+
+/* The image is contained inside this div */
+.profile-photo {
+    /* Set a fixed size for the container itself */
+    width: 300px; /* <--- CURRENT WIDTH */
+    height: 300px; /* <--- CURRENT HEIGHT */
+    
+    margin: 0 auto 20px auto; 
+    border-radius: 50%;
+    overflow: hidden; 
+    border: 5px solid #00c98d;
+    box-sizing: content-box; 
+}
+
+.left h1 {
+    font-size: 32px;
+    margin-bottom: 5px;
+}
+
+.left h2 {
+    font-size: 18px;
+    color: #00c98d; 
+    margin-bottom: 30px;
+}
+
+.contact-info {
+    margin-top: 50px;
+    padding-top: 20px;
+    border-top: 1px solid #00c98d;
+    text-align: left;
+}
+
+.contact-info h3 {
+    margin-bottom: 10px;
+    color: #003b2f;
+}
+
+/* --- Right Column Styling (Sections) --- */
+.title {
+    color: #ffcc00;
+    border-bottom: 2px solid #ffcc00;
+    padding-bottom: 5px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+/* SKILLS SECTION */
+.skills-list-lines {
+    list-style: none;
+    padding: 0;
+}
+
+.skills-list-lines li {
+    padding: 10px 0;
+    border-bottom: 1px dashed #3a4b51;
+    transition: background-color 0.3s;
+}
+
+.skills-list-lines li:hover {
+    background-color: #273438;
+}
+
+.skills-list-lines li:last-child {
+    border-bottom: none;
+}
+
+/* Projects Section */
+.project {
+    margin-bottom: 25px;
+    padding-left: 10px;
+    border-left: 3px solid #00c98d;
+}
+
+.project h3 {
+    color: #4da6ff;
+    margin-bottom: 5px;
+}
+
+.project a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #ffcc00;
+}
+
+/* General Link Style */
+a {
+    color: #4da6ff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: #ffcc00;
+}
+
+/* --- MOBILE RESPONSIVENESS (Crucial for preventing overlap) --- */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Stacks the left and right columns */
+    }
+    
+    .left, .right {
+        width: 100%; /* Both take full width */
+        min-height: auto;
+        padding: 30px 20px;
+    }
+
+    .left {
+        /* Optional: Change background for visual separation on mobile */
+        background-color: #c8e6c9; 
+    }
+
+    .profile-photo {
+        margin-bottom: 10px;
+    }
+}
