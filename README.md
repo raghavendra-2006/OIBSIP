@@ -66,6 +66,3 @@ This task focuses only on UI design and layout, not on real booking functionalit
 - JavaScript (basic interaction / optional)
 
 ---
-
-## 📂 Project Structure
-
